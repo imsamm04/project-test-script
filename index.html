@@ -1,40 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <meta charset="utf-8">
 
 <head>
-    <!-- 自由に編集してください。 / Feel free to edit -->
     <title>KUZEN tag</title>
 
-    <!-- ここで JavaScript ファイルを読み込みます。 / Load JavaScript file here -->
     <script type="text/javascript" src="main.js"></script>
 
-    <!-- ここに KUZEN tag のスニペットを配置 / Paste KUZEN tag snippet here -->
+    <script class="kuzen_tag" type="text/javascript"
+        src="https://qc-tag.kuzen.io?tag_tracking_code=KT_OT/zfadq/IHkJQ==750&isLineChatApplication=1" async>
+            kuzen_tag.track('visit,leave,start_chat');
+            kuzen_tag.filter_request(true);
+            kuzen_tag.set_custom_values('visit', { "visit": "uuidV4()" });
+            kuzen_tag.set_custom_values('leave', { "leave": "uuidV4()" });
+            kuzen_tag.set_custom_values('start_chat', { "start_chat": "uuidV4()" });
+        </script>
 
-    <script>
-window.kuzenTagAsyncInit = function() {
-    window.kuzen_tag.add_query_parameter_url([]);
-    window.kuzen_tag.set_custom_value('Number Of visit_2', '');
-};
-(function() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://stg-tag-v2.kuzen.io?tracking_code=KT_G142pP4edWRyag%3D%3D185&line=1';
-    script.async = true;
-    document.head.appendChild(script);
-})();
-</script>
-
-    <!-- ここに WebPlugin のスニペットを配置 (start_chat のテストが必要な場合) -->
-    <!-- Paste WebPlugin snippet here (If start_chat testing is needed) -->
-
+    <script type="text/javascript">
+        var __const = window.__const || [];
+        __const['host'] = "https://qc-cbgw.kuzen.io";
+        __const['access_token'] = "181eb7425e2d40c16e78e312c11edc83";
+        __const['secret_token'] = "c9b47809c68b873109cc98a61a0dc804";
+        var app = (function (doc, scr) {
+            var created_element = doc.createElement(scr),
+                sub_ele = doc.getElementsByTagName(scr)[0];
+            created_element.type = 'text/javascript'
+            created_element.async = true;
+            created_element.setAttribute('charset', 'utf-8');
+            created_element.src = __const['host'] + '/chat_app_logic.js';
+            sub_ele.parentNode.insertBefore(created_element, sub_ele);
+        })(document, 'script');
+    </script>
 </head>
 
 
 <body>
-    <!-- 自由に編集してください。 / Feel free to edit -->
-    <h1>KUZEN tag test 1111</h1>
+    <h1>KUZEN tag test service1</h1>
 </body>
 
 </html>
