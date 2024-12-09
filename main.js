@@ -44,3 +44,25 @@ function getRandomDateTime(fromDate) {
     const second = ('00' + getRandomInt(59)).slice(-2);
     return year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
 }
+
+// ページ遷移時に line_id を 自動でクエリパラメータに付与する / Add line_id to query parameter when moving to another page.
+function addLineIdToQueryParam() {
+    const params = new Proxy(new URLSearchParams(window.location.search), { get: (searchParams, prop) => searchParams.get(prop) });
+    const line_id = params.line_id;
+
+    if (line_id === null) { // add
+        return;
+    }
+
+    const query_parameter = 'line_id=' + line_id;
+
+    const element = document.getElementById('add-line-id');
+    let target_href = element.getAttribute('href');
+
+    if (target_href.indexOf('?') !== -1) {
+        target_href += '&' + query_parameter;
+    } else {
+        target_href += '?' + query_parameter;
+    }
+    element.setAttribute('href', target_href);
+}
