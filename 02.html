@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+
+<head>
+    <title>KUZEN tag 2</title>
+
+    <script type="text/javascript" src="main.js"></script>
+
+    <script class="kuzen_tag" type="text/javascript"
+        src="https://qc-tag.kuzen.io?tag_tracking_code=KT_OT/zfadq/IHkJQ==750&isLineChatApplication=1" async>
+            kuzen_tag.track('visit,leave,start_chat');
+            kuzen_tag.filter_request(true);
+            kuzen_tag.set_custom_values('visit', { "visit": "uuidV4()" });
+            kuzen_tag.set_custom_values('leave', { "leave": "uuidV4()" });
+            kuzen_tag.set_custom_values('start_chat', { "start_chat": "uuidV4()" });
+        </script>
+
+    <script type="text/javascript">
+        var __const = window.__const || [];
+        __const['host'] = "https://qc-cbgw.kuzen.io";
+        __const['access_token'] = "181eb7425e2d40c16e78e312c11edc83";
+        __const['secret_token'] = "c9b47809c68b873109cc98a61a0dc804";
+        var app = (function (doc, scr) {
+            var created_element = doc.createElement(scr),
+                sub_ele = doc.getElementsByTagName(scr)[0];
+            created_element.type = 'text/javascript'
+            created_element.async = true;
+            created_element.setAttribute('charset', 'utf-8');
+            created_element.src = __const['host'] + '/chat_app_logic.js';
+            sub_ele.parentNode.insertBefore(created_element, sub_ele);
+        })(document, 'script');
+    </script>
+</head>
+
+
+<body>
+    <h1>(02) KUZEN tag test service</h1>
+</body>
+
+</html>
