@@ -16,15 +16,16 @@
             kuzen_tag.set_custom_values('start_chat', { "start_chat": "uuidV4()" });
         </script>
 
+    <!-- Đoạn script mới dành cho staging -->
     <script type="text/javascript">
         var __const = window.__const || [];
-        __const['host'] = "https://qc-cbgw.kuzen.io";
-        __const['access_token'] = "181eb7425e2d40c16e78e312c11edc83";
-        __const['secret_token'] = "c9b47809c68b873109cc98a61a0dc804";
-        var app = (function (doc, scr) {
+        __const['host'] = "https://stg-cbgw.kuzen.io";
+        __const['access_token'] = "cd3567589c3e85c02d20a1d873ef3bc3";
+        __const['secret_token'] = "546b6cdb621ad61e05f4e5f1a762bfb6";
+        var app = (function(doc, scr) {
             var created_element = doc.createElement(scr),
                 sub_ele = doc.getElementsByTagName(scr)[0];
-            created_element.type = 'text/javascript'
+            created_element.type = 'text/javascript';
             created_element.async = true;
             created_element.setAttribute('charset', 'utf-8');
             created_element.src = __const['host'] + '/chat_app_logic.js';
@@ -32,7 +33,6 @@
         })(document, 'script');
     </script>
 </head>
-
 
 <body>
     <h1>(02) KUZEN tag test service</h1>
